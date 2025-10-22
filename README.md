@@ -9,7 +9,7 @@ A personal portfolio built using **React** to showcase my projects, skills, and 
 - Dedicated sections: About, Skills, Projects, Contact  
 - Easy to customize and deploy
  
-🔗 **Live Demo:** [View Portfolio](https://portfolio-paojangam-kipgens-projects.vercel.app/#services)
+🔗 **Live Demo:** [View Portfolio](https://portfolio-mauve-pi-552qiew6a0.vercel.app/)
 
 ---
 
