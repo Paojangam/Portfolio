@@ -7,7 +7,9 @@ A personal portfolio built using **React** to showcase my projects, skills, and 
 ## 🚀 Features
 - Responsive, modern React UI  
 - Dedicated sections: About, Skills, Projects, Contact  
-- Easy to customize and deploy  
+- Easy to customize and deploy
+ 
+🔗 **Live Demo:** [View Portfolio](https://portfolio-paojangam-kipgens-projects.vercel.app/#services)
 
 ---
 
