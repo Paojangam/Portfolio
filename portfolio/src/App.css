@@ -602,3 +602,44 @@ img, video, iframe, embed, object, svg {
   height: auto;
   display: block;
 }
+/* emergency clamp - paste at end of CSS */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+/* universal box-sizing for pseudo-elements too */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* image / media safety */
+img, picture, video, iframe, embed, object, svg {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* clamp likely fixed-width containers */
+main, .app, .nav, .hero, .project-cards, .project-card, .portrait-card, .portrait-ring {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* override inline style abuses like width:100vw */
+*[style*="100vw"] {
+  width: 100% !important;
+}
+
+/* catch pseudo-element overflow */
+*::before, *::after {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* optionally mute debug hint if it's annoying */
+body::after {
+  display: none !important;
+}
