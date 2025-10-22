@@ -1,4 +1,5 @@
-:root {
+ 
+ :root {
   --bg: #0f0f0f;
   --card: #151515;
   --muted: #7b7b7b;
@@ -517,4 +518,50 @@ main {
   .row {
     flex-direction: column;
   }
+}
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+img, video, iframe, embed, object, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.__overflow-debug {
+  outline: 3px solid rgba(255, 0, 0, 0.85) !important;
+  background: rgba(255, 0, 0, 0.03);
+}
+
+[class*="wide"], [class*="full"], .project-image, .portrait-card, .portrait-ring {
+  max-width: 100%;
+}
+
+main, .app, .nav, .hero, .project-cards {
+  min-width: 0;
+  width: 100%;
+}
+
+*[style*="translateX"], *[style*="transform"] {
+  will-change: auto;
+}
+
+body::after {
+  content: "Overflow debug enabled — check console for 'OVERFLOW' logs";
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  font-size: 11px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 6px 8px;
+  border-radius: 6px;
+  z-index: 99999;
+  pointer-events: none;
 }
