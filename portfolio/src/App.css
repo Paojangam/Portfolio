@@ -10,8 +10,13 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents the mysterious right-side blank space */
+}
+
+body {
   font-family: "Inter", sans-serif;
   background: var(--bg);
   color: #eaeaea;
@@ -132,7 +137,6 @@ body {
   padding: 60px 0;
 }
 
-
 .section-title {
   text-align: center;
   font-size: 32px;
@@ -211,7 +215,6 @@ body {
   .contact-icon svg { width: 24px; height: 24px; }
   .contact-icon .label { font-size: 11px; }
 }
-
 
 .dot {
   width: 50px;
@@ -325,40 +328,7 @@ textarea {
   color: var(--muted);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 700ms ease, transform 700ms ease;
-}
-
-.reveal-visible {
-  opacity: 1;
-  transform: none;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-@media (max-width: 900px) {
-  main { padding-left: 6vw; padding-right: 6vw; max-width: 100%; }
-  .hero { flex-direction: column; padding-top: 40px; padding-bottom: 40px; gap: 24px; }
-  .portrait-card { width: 56vw; } 
-}
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contacts {
-    flex-wrap: wrap;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-}
+/* Consolidated reveal block (removed duplicate/conflicting declarations) */
 .reveal {
   opacity: 0;
   transform: translateY(30px) scale(0.98);
@@ -387,19 +357,16 @@ textarea {
   transform: translateY(-8px) scale(1.01);
 }
 
-.reveal,
-.reveal-visible {
-  transition-delay: 0ms;
-}
-
+/* main layout */
 main {
   width: 100%;
-max-width: none;
+  max-width: none;
   margin: 0 auto;      
   box-sizing: border-box;
   padding-left: 6vw;   
   padding-right: 6vw;
 }
+
 .projects {
   background: transparent;
   padding: 80px 0;
@@ -518,4 +485,36 @@ max-width: none;
   transform: translateY(-6px);
 }
 
+/* RESPONSIVE RULES (fixed: removed nested media queries and duplicates) */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 24px;
+  }
 
+  main {
+    padding-left: 6vw;
+    padding-right: 6vw;
+    max-width: 100%;
+  }
+
+  .portrait-card {
+    width: 56vw;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts {
+    flex-wrap: wrap;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
