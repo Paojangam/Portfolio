@@ -129,8 +129,9 @@ body {
 }
 
 .section {
-  padding: 60px 8vw;
+  padding: 60px 0;
 }
+
 
 .section-title {
   text-align: center;
@@ -393,7 +394,7 @@ textarea {
 
 main {
   width: 100%;
-  max-width: 1200px;   
+max-width: none;
   margin: 0 auto;      
   box-sizing: border-box;
   padding-left: 6vw;   
